@@ -47,7 +47,9 @@ exports.publish = function (topicArn, message) {
 
   if (typeof topicArn === 'string') {
     params = { TopicArn: topicArn }
-    params.Message = JSON.stringify(message || {})
+    params.Message = typeof message === 'string'
+      ? message
+      : JSON.stringify(message || {})
   } else {
     params = assign({}, topicArn)
   }

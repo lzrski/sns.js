@@ -1,3 +1,7 @@
+Unpublished
+===========
+
+  * Do not stringify message if it's already a string
 
 1.1.0 / 2016-11-28
 ==================
